@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="page.jsf" id="d1">
+        <af:form id="f1" usesUpload="true">
+            <af:inputFile label="Label 1" id="if1" valueChangeListener="#{pageFlowScope.myBean.uploadFile}"
+                          autoSubmit="true"/>
+            <af:button text="Save" id="b1" action="#{pageFlowScope.myBean.onClick}"/>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:myBean-->
+</f:view>

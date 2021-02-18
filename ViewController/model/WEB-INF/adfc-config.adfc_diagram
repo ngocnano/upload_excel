@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">page</property>
+      <property
+         name="x">106.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>page&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">213.29883</property>
+      <property
+         name="page">/page.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">view</property>
+      <property
+         name="x">602.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>view&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">214.59766</property>
+      <property
+         name="page">/view.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">view</property>
+      <property
+         name="sdm:polyPoints">R46,147.01099,209.44824,561.0,210.74707,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">page</property>
+      <property
+         name="sdm:polyPoints">L54,560.989,217.74707,147.0,216.44824,R54</property>
+   </ControlFlowCase>
+</SDM>

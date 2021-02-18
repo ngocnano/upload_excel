@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="view.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:table value="#{pageFlowScope.myBean.listInfo}" var="row" rows="#{bindings.listInfo.rangeSize}"
+                      emptyText="#{bindings.listInfo.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" fetchSize="#{bindings.listInfo.rangeSize}" id="t1">
+                <af:column headerText="#{bindings.listInfo.hints.memberOrderID.label}" id="c1">
+                    <af:outputText value="#{row.memberOrderID}"
+                                   shortDesc="#{bindings.listInfo.hints.memberOrderID.tooltip}" id="ot1"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberID.label}" id="c2">
+                    <af:outputText value="#{row.memberID}" shortDesc="#{bindings.listInfo.hints.memberID.tooltip}"
+                                   id="ot2"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberName.label}" id="c3">
+                    <af:outputText value="#{row.memberName}" shortDesc="#{bindings.listInfo.hints.memberName.tooltip}"
+                                   id="ot3"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.staffID.label}" id="c4">
+                    <af:outputText value="#{row.staffID}" shortDesc="#{bindings.listInfo.hints.staffID.tooltip}"
+                                   id="ot4"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.staffName.label}" id="c5">
+                    <af:outputText value="#{row.staffName}" shortDesc="#{bindings.listInfo.hints.staffName.tooltip}"
+                                   id="ot5"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberRole.label}" id="c6">
+                    <af:outputText value="#{row.memberRole}" shortDesc="#{bindings.listInfo.hints.memberRole.tooltip}"
+                                   id="ot6"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberProvince.label}" id="c7">
+                    <af:outputText value="#{row.memberProvince}"
+                                   shortDesc="#{bindings.listInfo.hints.memberProvince.tooltip}" id="ot7"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberDistrict.label}" id="c8">
+                    <af:outputText value="#{row.memberDistrict}"
+                                   shortDesc="#{bindings.listInfo.hints.memberDistrict.tooltip}" id="ot8"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberWard.label}" id="c9">
+                    <af:outputText value="#{row.memberWard}" shortDesc="#{bindings.listInfo.hints.memberWard.tooltip}"
+                                   id="ot9"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberAddress.label}" id="c10">
+                    <af:outputText value="#{row.memberAddress}"
+                                   shortDesc="#{bindings.listInfo.hints.memberAddress.tooltip}" id="ot10"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberIDCard.label}" id="c11">
+                    <af:outputText value="#{row.memberIDCard}"
+                                   shortDesc="#{bindings.listInfo.hints.memberIDCard.tooltip}" id="ot11"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberLoginAccount.label}" id="c12">
+                    <af:outputText value="#{row.memberLoginAccount}"
+                                   shortDesc="#{bindings.listInfo.hints.memberLoginAccount.tooltip}" id="ot12"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberPhoneNumber.label}" id="c13">
+                    <af:outputText value="#{row.memberPhoneNumber}"
+                                   shortDesc="#{bindings.listInfo.hints.memberPhoneNumber.tooltip}" id="ot13"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.memberPassword.label}" id="c14">
+                    <af:outputText value="#{row.memberPassword}"
+                                   shortDesc="#{bindings.listInfo.hints.memberPassword.tooltip}" id="ot14"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.EZ.label}" id="c15">
+                    <af:outputText value="#{row.EZ}" shortDesc="#{bindings.listInfo.hints.EZ.tooltip}" id="ot15"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.dauNoi.label}" id="c16">
+                    <af:outputText value="#{row.dauNoi}" shortDesc="#{bindings.listInfo.hints.dauNoi.tooltip}"
+                                   id="ot16"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.MK.label}" id="c17">
+                    <af:outputText value="#{row.MK}" shortDesc="#{bindings.listInfo.hints.MK.tooltip}" id="ot17"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.NVPT.label}" id="c18">
+                    <af:outputText value="#{row.NVPT}" shortDesc="#{bindings.listInfo.hints.NVPT.tooltip}" id="ot18"/>
+                </af:column>
+                <af:column headerText="#{bindings.listInfo.hints.CHPT.label}" id="c19">
+                    <af:outputText value="#{row.CHPT}" shortDesc="#{bindings.listInfo.hints.CHPT.tooltip}" id="ot19"/>
+                </af:column>
+            </af:table>
+            <af:listView value="#{pageFlowScope.myBean.errorlogs}" var="item"
+                         emptyText="#{bindings.errorlogs.viewable ? 'No data to display.' : 'Access Denied.'}"
+                         fetchSize="#{bindings.errorlogs.rangeSize}" id="lv1">
+                <af:listItem id="li1">
+                    <af:panelGroupLayout layout="horizontal" id="pgl1">
+                        <f:facet name="separator">
+                            <af:spacer width="10" id="s1"/>
+                        </f:facet>
+                        <af:outputFormatted value="#{item}" id="of1"/>
+                    </af:panelGroupLayout>
+                </af:listItem>
+            </af:listView>
+            <af:button text="page" id="b1" action="page"/>
+        </af:form>
+    </af:document>
+</f:view>

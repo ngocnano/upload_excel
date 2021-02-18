@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="view2PageDef"
+                Package="demo.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="MyBean" id="MyBeanIterator"/>
+    <accessorIterator MasterBinding="MyBeanIterator" Binds="listInfo" RangeSize="25" DataControl="MyBean"
+                      BeanClass="demo.model.ImportInformation" id="listInfoIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="listInfoIterator" id="listInfo">
+      <nodeDefinition DefName="demo.model.ImportInformation" Name="listInfo0">
+        <AttrNames>
+          <Item Value="memberOrderID"/>
+          <Item Value="memberID"/>
+          <Item Value="memberName"/>
+          <Item Value="staffID"/>
+          <Item Value="staffName"/>
+          <Item Value="memberRole"/>
+          <Item Value="memberProvince"/>
+          <Item Value="memberDistrict"/>
+          <Item Value="memberWard"/>
+          <Item Value="memberAddress"/>
+          <Item Value="memberIDCard"/>
+          <Item Value="memberLoginAccount"/>
+          <Item Value="memberPhoneNumber"/>
+          <Item Value="memberPassword"/>
+          <Item Value="EZ"/>
+          <Item Value="dauNoi"/>
+          <Item Value="MK"/>
+          <Item Value="NVPT"/>
+          <Item Value="CHPT"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
