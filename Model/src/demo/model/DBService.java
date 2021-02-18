@@ -19,7 +19,7 @@ public class DBService {
     public DBService() {
         super();
     }
-    public static List<String> create(){
+    public static void create(){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         Statement statement = null;
@@ -47,7 +47,6 @@ public class DBService {
                 System.out.println(error);
             }
         }   
-        return logErrors;
     }
 
     public static boolean testConnec(){

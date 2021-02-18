@@ -105,7 +105,7 @@ public class MyBean {
         DBService.setLogErrors(this.errorlogs);
         DBService.setImports(this.getListInfo());
         if(DBService.testConnec()){
-           this.errorlogs = DBService.create();
+           DBService.create();
         }
         return "view";
     }
